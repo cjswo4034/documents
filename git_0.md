@@ -1,22 +1,25 @@
-### Pull Requests
+## Pull Requests
 
 > Pull requests let you tell others about changes you've pushed to a brach in a repository on Github.
 >
 > 풀리퀘는 당신이 변경한 내용에 대해서 다른 사람들에게 말해준다.
 
 * commit한 내용을 master에 Merge하는 것에 대해 동의를 구하는 것
+
 * 주요 항목
-  * 작업 제목
-  * 작업 내용
-  * 커밋 로그
-  * 리뷰어
+   1) 작업 제목
+   2) 작업 내용
+   3) Commit logs
+   4) Reviewer
+
 * 규칙
   * 1개의 PR에는 1개의 기능에 대한 변경 및 추가를 포함하는게 좋다.
   * 제목만 보고도 어떤 작업을 했는지 알 수 있도록 한 줄로 요약해서 작성.
-    * 이슈와 관련된 PR => [Issue Number] [Behavior] Title ([참고](https://github.com/Mash-Up-MapC/MapC-backend/pull/54))
-  * 내용은 제목에서 적지 못한 구체적인 작업 내용 / 상황 / 관련 자료 등을 넣어서 이해를 돕는다.
+    
+    > 이슈와 관련된 PR을 작성할 때:  [Issue Number] [Behavior] Title ([참고](https://github.com/Mash-Up-MapC/MapC-backend/pull/54))
+* 내용은 제목에서 적지 못한 구체적인 작업 내용 / 상황 / 관련 자료 등을 넣어서 이해를 돕는다.
+  
 * Pull Request 하기
-
 ```
 1) 작업할 브랜치로 Checkout (git checkout <branch>)
 2) 작업 내용 Commit
@@ -26,7 +29,6 @@
 ```
 
 * Pull Request 리뷰 하기
-
 ```
 1) PR이 어떤 작업에 대한 PR인지 파악
 2) 상단의 커밋 탭에서 커밋 히스토리를 살펴본다.
@@ -40,36 +42,29 @@
 ```
 
 * 병합하기
-
   * Create a merge commit
-
-    PR의 commit들이 관련 메시지와 함께 master의 Head commit으로 들어간다.
-
-    메세지는 수정할 수 있으나 master에 병합될 때 log들이 지저분하게 삽입된다.
-
-    (git merge 명령이랑 똑같다.)
+    - PR의 commit들이 관련 메시지와 함께 master의 Head commit으로 들어간다.
+    - 메세지는 수정할 수 있으나 master에 병합될 때 log들이 지저분하게 삽입된다.
+      (git merge 명령이랑 똑같다.)
 
   * Rebase and merge
-
-    PR의 log들이 master에 재정렬돼서 병합된다. 
-
-    로컬에서 작성된 모든 커밋로그들까지 추적할 수 있으므로 PR의 모든 커밋들이 master에서 관리돼야한다면 이 방법으로 하는 것이 좋다.
+    - PR의 log들이 master에 재정렬돼서 병합된다. 
+    - 로컬에서 작성된 모든 커밋로그들까지 추적할 수 있으므로 PR의 모든 커밋들이 master에서 관리돼야한다면 이 방법으로 하는 것이 좋다.
 
   * Squash and merge
-
-    PR의 log들을 한개로 정리하여 master에 병합한다.
-
-    PR의 제목으로 된  log가 master에 병합된다.
+    - PR의 log들을 한개로 정리하여 master에 병합한다.
+    - PR의 제목으로 된  log가 master에 병합된다.
 
 * 되돌리기
-
   * Revert를 누르면 PR의 모든 commit이 되돌려진다.
 
 * [Link](https://brunch.co.kr/@anonymdevoo/9)
 
 
 
-### Branch
+<br/>
+
+## Branch
 
 * 일반적으로 master에 브랜치를 최종 버전으로 서비스를 배포하므로 master와 격리된 공간에서 작업하고 master에는 커밋하지 않는다.
 
@@ -89,7 +84,9 @@
 
 
 
-### 되돌리기 (Reset, Revert)
+<br/>
+
+## 되돌리기 (Reset, Revert)
 
 * Reset (삭제) : 커밋 로그 제거
 
@@ -128,7 +125,9 @@
 
 
 
-#### Fork repository 최신 버전으로 유지하기
+<br/>
+
+## Fork repository 최신 버전으로 유지하기
 
 1. 새롭게 Fork
 
@@ -148,7 +147,9 @@
 
 
 
-### 명명 규칙
+<br/>
+
+## 명명 규칙
 
 ```
 https://rumblefish.tistory.com/65
