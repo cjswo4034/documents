@@ -73,13 +73,14 @@
   : 현재 branch에서 새로운 브랜치를 만든다. (-b 옵션은 만들고 브랜치로 이동)
 - git checkout <name>
   : <name> branch로 이동한다.
+- git clone -b <branch> --single-branch <url> [dest-floder-path]
+  : 특정 branch clone
 ```
 
 * branch의 작업내용 병합하기
   * Merge: 베이스 branch의 head를 대상 branch의 head로 이동하는 방식
   * Rebase: rebase 했을 때의 branch head를 기준으로 재정렬?
 * [Merge와 Rebase의 차이](https://brunch.co.kr/@anonymdevoo/7)
-
 * [Link](https://brunch.co.kr/@anonymdevoo/6)
 
 
