@@ -6,6 +6,14 @@
 
 
 
+### Multi Run
+
+* 여러 개의 애플리케이션 함께 실행하기
+
+* Run/Debug Configuration -> Compound
+
+
+
 ### **JIRA**
 
 - Preference > Tools > Tasks > Servers > jira 서버 추가
