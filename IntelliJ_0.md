@@ -14,7 +14,10 @@
 
   - 나의 jira 선택가능
   - jira에 대한 progress를 선택, 브랜치 생성 등 가능
-- [Link] (https://jojoldu.tistory.com/260)
+  
+- [Link](https://jojoldu.tistory.com/260)
+
+- [Jira 처음 사용자](https://hanminwoo.com/60)
 
 
 
@@ -62,7 +65,7 @@
 
 - api json formatting기능
 - **json 정렬필요하다면?**
-- json viewer
+  - json viewer
 - **json으로 DTO 만들고 싶다면?**
   - class 새로만들어서 우클릭 -> make class(getter setter 가능)
 - **class를 json형태로 만들고 싶다면?**
@@ -83,24 +86,30 @@
 ### 커맨드
 
 - 이동 및 탐색
-  - 전체 검색: `Shift + Shift`
+  - 전체 검색: `shift + shift`
   - Action 검색: `shift + ctrl + a`
-  - 프로젝트에서 코드 검색 : `Shift + Ctrl + F`
+  - 프로젝트에서 코드 검색 : `shift + ctrl + F`
 
 * 라인 
-  * 복사 :  `Ctrl + D`
-  * 삭제 :  `Ctrl + y`
-  * 오리기 :  `Ctrl + x`
-  * 합치기 :  `Ctrl + Shift + j ` (밑에 있는 줄을 현재 줄의 맨 뒤로 합침)
-  * 옮기기 1 :  `Shift + Alt + (Up | Down)` (구문, 문법 신경쓰지 않고 옮김)
-  * 옮기기 2 :  `Shift + Ctrl + (Up | Down)` (문법적 오류 한도 내에서 옮길 수 있음)
+  * 복사 :  `ctrl + D`
+  * 삭제 :  `ctrl + y`
+  * 오리기 :  `ctrl + x`
+  * 합치기 :  `ctrl + shift + j ` (밑에 있는 줄을 현재 줄의 맨 뒤로 합침)
+  * 옮기기 1 :  `shift + alt + (Up | Down)` (구문, 문법 신경쓰지 않고 옮김)
+  * 옮기기 2 :  `shift + ctrl + (Up | Down)` (문법적 오류 한도 내에서 옮길 수 있음)
 
 
 
 * 구문
 
-  * 구문 옮기기 :  `Shift + Ctrl + Alt + (Left | Down)` 
+  * 구문 옮기기 :  `shift + ctrl + alt + (Left | Down)` 
 
     > 매개변수 or 태그 등의 구문을 좌, 우로 이동
 
-  * 
+
+
+
+* 번역
+  * 구문 번역 :  `shift + alt + =, [`
+  * 구문 변경 :  `shift + alt + =, ]`
+  * 통번역 :  `shift + alt + =, \`
