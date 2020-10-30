@@ -147,6 +147,7 @@
 * [Link](https://jybaek.tistory.com/775)
 
 <br/>
+
 ## git auto login on ubuntu
 1. ~/.ssh 에서 ```ssh-keygen -t rsa```명령어로 ssh키 생성
 2. github 홈페이지 계정설정에서 new sshkey 선택
