@@ -146,7 +146,14 @@
 
 * [Link](https://jybaek.tistory.com/775)
 
-
+<br/>
+## git auto login on ubuntu
+1. ~/.ssh 에서 ```ssh-keygen -t rsa```명령어로 ssh키 생성
+2. github 홈페이지 계정설정에서 new sshkey 선택
+3. 1에서 만든 id_rsa.pub 내용을 붙여넣기
+4. repository에서 code ssh url 복사하기 
+5. local repository에서 ```git remote set-url oigin [ssh-url]```실행
+* [link](https://proni.tistory.com/entry/%F0%9F%90%A7-Ubuntu-Git-username-password-%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 <br/>
 
