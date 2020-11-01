@@ -11,20 +11,21 @@
 
 2. 환경변수 만들기
 
-## Git username, password 없기 사용하기
+## Git username, password 없이 사용하기
 
-1. 우분투에서 공개키 만들기
+1. 우분투에서 공개키 만들기 ([출처](https://proni.tistory.com/entry/%F0%9F%90%A7-Ubuntu-Git-username-password-%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0))
 
     ```shell
     ssh-keygen -t rsa [-b bitsize]
     a) 공개키를 생성할 경로를 지정한다. 엔터치면 기본 경로에 만든다.
-    b) 시드값 같은 역할. 권장값은 10~30의 숫자이고 생략가능하다.
-        공개키를 사용할 때 비밀번호를 물을 때 이 값을 입력하면 된다.
+    b) 공개키를 사용할 때 묻는 비밀번호로 권장값은 10~30의 문자이고 생략가능하다.
     c) 비밀번호를 확인하는 단계로 b)에서 입력한 값을 입력한다.
     ```
 
     > 보안을 위해서 공개키를 만들고 chmod로 권한을 수정해야한다.
+    >
     > 개인키 : ~/.ssh/id_rsa
+    >
     > 공개키 : ~/.ssh/id_rsa.pub
 
 2. git에서 ssh키 등록하기
@@ -38,7 +39,9 @@
 3. remote repository url 변경하기
 
    1. git의 project page에서 `use url`을 클릭한 다음 링크를 복사한다.
+
         ![ssh](./images/ssh_url.png)
+
    2. local repository의 루트에서 터미널을 열고 다음 명령을 실행한다.
 
         ```shell
