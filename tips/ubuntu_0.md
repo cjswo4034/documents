@@ -5,11 +5,29 @@
 1. alias 명령어로 변수 만들기
 
     ```shell
-    1) alias [변수명]='명령어'
+    1) sed -i '$aalias [변수명]="명령어"' ~/.zshrc
     2) source ~/.zshrc
     ```
 
+   - trello 관련 변수
+     - trcs : google-chrome https://trello.com/b/KTftSr0P/cs
+     - trlog : google-chrome https://trello.com/b/zg7FpuoX/devlog
+   - idea 관련 변수
+     - idlog : idea.sh ~/nsm/project/devlog
+     - iddoc : idea.sh ~/nsm/project/devlog
+     - idjava : idea.sh ~/nsm/project/devlog
+   - 기타
+     - ws : cd ~/nsm/project
+
 2. 환경변수 만들기
+  
+   - z쉘이 설정을 불러오는 순서 ([링크](https://wiki.archlinux.org/index.php/zsh#Startup.2FShutdown_files))
+     1. zshenv
+     2. zprofile
+     3. zshrc
+     4. zlogin
+
+<br>
 
 ## Git username, password 없이 사용하기
 
@@ -40,7 +58,7 @@
 
    1. git의 project page에서 `use url`을 클릭한 다음 링크를 복사한다.
 
-        ![ssh](./images/ssh_url.png)
+        ![ssh](../images/ssh_url.png)
 
    2. local repository의 루트에서 터미널을 열고 다음 명령을 실행한다.
 
@@ -50,3 +68,18 @@
         ```
 
    3. 비밀번호를 묻는다면 공개키를 만들 때 입력했던 passphrase값을 입력한다.
+
+<br>
+
+## 기타
+
+### 명령어
+
+- deb파일 설치하기 : `sudo dpkg -i (deb file)`
+
+### 커맨드
+
+- 터미널
+  - 터미널 열기 : `ctrl + alt + t`
+- 애플리케이션
+  - 전체 목록 열기 : `super + a`

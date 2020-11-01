@@ -102,3 +102,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-left "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "[]"
 ```
+
+## sonarlint
+
+- 코드 검사를 위한 플러그인
