@@ -69,6 +69,94 @@
 
    3. 비밀번호를 묻는다면 공개키를 만들 때 입력했던 passphrase값을 입력한다.
 
+
+
+## 브라우저에서 휠 버튼 클릭시 스크롤이 안될 때
+
+1. 마우스의 deviceID를 찾기
+
+   ```shell
+   xinput list | grep -i mouse
+   ```
+
+   
+
+2. 마우스의 옵션 중 scroll method id 찾기
+
+   ```shell
+   xinput --list-props <deviceId> | grep -i scroll
+   ```
+
+   man libinput을 보면 scroll method는 어떤 방법을 사용했을 때 스크롤 동작을 할 것인지 묻는 속성. 3번째가 버튼이라 3번째에 값 1을 줘야됨.
+
+   button scrolling button은 1: 왼쪽, 2: 중앙, 3:오른쪽 버튼을 의미하며 스크롤 메소드는 이 옵션에 지정된 버튼이 메소드에 지정된 방법으로 눌렸을 때 동작.
+
+   
+
+3. Scroll Method Enabled 속성의 값을 0, 0, 1로 설정
+
+   ```shell
+   xinput set-prop <deviceId> "libinput Scroll Method Enabled" 0, 0, 1
+   ```
+
+   
+
+4. 부팅 시 자동으로 설정
+
+   ```shell
+   echo 'xinput set-prop <deviceId> "libinput Scroll Method Enabled" 0, 0, 1' >> .xinpurc
+   ```
+
+   > 모든 유저에게 적용하려면 
+
+
+
+- References
+  - [askubuntu](https://askubuntu.com/questions/20298/how-to-make-xinput-settings-persist-after-devices-are-unplugged-replugged-and/461173#461173)
+  - [man page](http://manpages.ubuntu.com/manpages/bionic/man4/libinput.4.html)
+
+
+
+<br>
+
+
+
+## 테마 관련
+
+### 폴더 사이드바의 별표 추가하기
+
+* 파일이나 폴더를 오른쪽 클릭했을 때 나타나는 '별표 붙이기' 항목을 통해 별표를 붙일 수 있다.
+* 책갈피가 되어있으면서, 설정 -> 검색 -> 검색 위치 -> 책갈피 탭에서 옵션이 활성화 되어있는 폴더의 하위 파일이나 폴더에만 '별표 붙이기'를 할 수 있다.
+* 별표가 붙은 항목은 사이드바의 별표 탭에서 확인할 수 있다.
+
+
+
+- 아래의 상황에서는 별표 붙이기 항목이 나타나서 별표를 붙이더라도 동작하지 않는다.
+
+  1. 현재 폴더를 책갈피에 등록한다.
+  2. 현재 폴더를 검색가능하게 변경한다.
+  3. 책갈피를 제거한다.
+
+  > 위와 같이 검색 가능하지만 책갈피가 아닌 폴더 내의 파일이나 폴더는 별표 붙이기 항목이 나타나긴 하지만 별표를 붙여도 아무 변화가 없다.
+
+
+
+### 폴더 사이드바의 어플리케이션 지우기 or 연결 디렉토리 변경하기
+
+* xdg-user-dirs-update 명령어로 /etc/xdg/user-dirs.defaults 에서 기본값 읽음
+* /etc/xdg/user-dirs.conf 에서 설정함. 유저 홈 디렉토리의 ~/.config/user-dirs.conf가 있으면 유저 홈의 conf파일의 우선순위가 높음
+* 유저 초기화할 때 conf 읽고 defaults에 있는 Key값과 매칭되는 value를 홈 디렉토리에서 찾고 user-dirs.dirs를 매핑시킴
+* 사이드바에서 보기 싫은 디렉토리를 .defaults 파일에서 #으로 주석처리한다.
+
+
+
+### 동작과정 [링크](https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html)
+
+1. /usr/share/applications/nautilus-autorun-software.desktop 
+2. 1의 exec인 nautilus-autorun-software 실행
+
+
+
 <br>
 
 ## 기타
